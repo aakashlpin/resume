@@ -1,4 +1,5 @@
-;(function() {
+'use strict';
+(function() {
     var SkillCreator = (function() {
         return function() {
             var listParentElem = $('#skills-list');
@@ -27,6 +28,10 @@
                 {
                     name: 'JavaScript, jQuery',
                     level: 8
+                },
+                {
+                    name: 'CoffeeScript',
+                    level: 6
                 },
                 {
                     name: 'BackboneJS, Marionette',
@@ -70,13 +75,13 @@
                         }
                         __this
                             .find('.skill-graph > span:nth-child(' + internalLevel + ')')
-                            .addClass('selected');                        
-                    }                    
+                            .addClass('selected');
+                    };
                 })(0), 150);
             });
-        }
+        };
 
     })();
     
-    SkillCreator();
+    new SkillCreator();
 }());
