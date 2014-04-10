@@ -1,0 +1,120 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$page-background: #f1f1f1;
+$font-family-sans-serif: "proxima-nova", sans-serif;
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: 18px;
+}
+
+p {
+  color: #666;
+
+}
+
+.wrapper {
+  border-style: solid;
+  border-width: 0 1px 0 1px;
+  border-color: #DDD;
+  background-color: $page-background;
+}
+
+.padded {
+  padding: 0 20px 60px 20px;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.media > .pull-left {
+  margin-right: 45px;
+}
+
+.img-profile {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  padding: 3px;
+  background: #fff;
+  border-radius: 3px;
+  
+  @media only screen and (min-width: $screen-sm-min) {
+    width: 180px;
+  }
+}
+
+//create helper methods for Margin-bottom utility
+$mb: 10;
+@while $mb < 120 {
+  .mb-#{$mb} {
+    margin-bottom: #{$mb}px
+  }
+  $mb: $mb+10;
+}  
+
+.skill-graph > span:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.skill-graph > span:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+$skill-pill-unfilled: #bbb;
+$skill-pill-filled: rgb(130, 189, 130);
+$skill-pill-height: 30px;
+$skill-pill-animation-time: 0.15s;
+
+.skill-graph span {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 10%;
+  height: $skill-pill-height;
+  border-right: 5px solid $page-background;
+  background-color: $skill-pill-unfilled;
+  
+  &.selected {
+    background-image: linear-gradient(left, $skill-pill-filled, $skill-pill-filled 50%, $skill-pill-unfilled 50%, $skill-pill-unfilled);
+    background-size: 200% auto;
+    animation-duration: $skill-pill-animation-time;
+    animation-name: fillIn;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fillIn {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#skills-list > li .skill-item {
+  position: relative;
+}
+
+.skill-level {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  line-height: $skill-pill-height;
+  font-weight: bold;
+  font-size: 32px;
+  display: none;
+  color: rgb(27, 85, 27);
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+}
