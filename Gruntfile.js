@@ -171,7 +171,8 @@ module.exports = function (grunt) {
         // Add vendor prefixed styles
         autoprefixer: {
             options: {
-                browsers: ['last 2 version', 'ie 8', 'ie 9']
+                browsers: ['last 2 version', 'ie 8', 'ie 9'],
+                cascade: true
             },
             dist: {
                 files: [{
@@ -314,6 +315,7 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
+                        'styles/PIE/{,*/}*.*',
                         'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*'
                     ]
                 }]
@@ -323,7 +325,7 @@ module.exports = function (grunt) {
                 dot: true,
                 cwd: '<%= config.app %>/styles',
                 dest: '.tmp/styles/',
-                src: '{,*/}*.css'
+                src: '{,*/}*.*'
             }
         },
 

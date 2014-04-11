@@ -7,10 +7,10 @@
                 return (
                 '<li data-level=' + skillItem.level + '>' +
                     '<div class="row">' +
-                        '<div class="col-xm-12 col-sm-3">' +
-                            '<p class="text-right skill-name">' + skillItem.name + '</p>' +
+                        '<div class="col-xm-12 col-sm-5 col-md-4 col-lg-3">' +
+                            '<p class="skill-name">' + skillItem.name + '</p>' +
                         '</div>' +
-                        '<div class="col-xm-12 col-sm-9 skill-item">' +
+                        '<div class="col-xm-12 col-sm-7 col-md-8 col-lg-9 skill-item">' +
                             '<div class="skill-graph">' +
                                 '<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>' +
                             '</div>' +
@@ -23,7 +23,7 @@
             var skillsJSON = [
                 {
                     name: 'HTML/ CSS',
-                    level: 10
+                    level: 9
                 },
                 {
                     name: 'JavaScript, jQuery',
@@ -38,7 +38,7 @@
                     level: 9
                 },
                 {
-                    name: 'Node JS',
+                    name: 'NodeJS, ReactJS',
                     level: 7
                 },
                 {
@@ -51,11 +51,11 @@
                 },
                 {
                     name: 'UI/UX Design',
-                    level: 6
+                    level: 7
                 }
             ];
             
-            skillsJSON.forEach(function(skillItem) {
+            $.each(skillsJSON, function(index, skillItem) {
                 listParentElem.append(skillBlock(skillItem));
             });
             

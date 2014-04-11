@@ -5,14 +5,34 @@ $font-family-sans-serif: "proxima-nova", sans-serif;
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+$orange: #e74c3c;
+
 body {
   font-family: $font-family-sans-serif;
   font-size: 18px;
+  
+  * {
+    transition: width 0.2s ease-out;
+  }
 }
 
 p {
   color: #666;
+  font-weight: 300;
+}
 
+time {
+  background: #e74c3c;
+  padding: 7px 12px 7px 45px;
+  margin-left: -45px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: inset 5px 0px 0px 0px #A22315;
+  text-shadow: 0px 1px 1px #666;
+  border-radius: 0 2px 2px 0;
+  behavior: url(./PIE/PIE.htc);
 }
 
 .wrapper {
@@ -31,16 +51,22 @@ p {
 }
 
 .media > .pull-left {
-  margin-right: 45px;
+  margin-right: 10px;
+  
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-right: 45px;    
+  }
 }
 
 .img-profile {
-  width: 100%;
+  width: 90px;
+  margin: 0 auto;
   box-sizing: border-box;
   border: 2px solid #ddd;
   padding: 3px;
   background: #fff;
   border-radius: 3px;
+  behavior: url(./PIE/PIE.htc);
   
   @media only screen and (min-width: $screen-sm-min) {
     width: 180px;
@@ -58,10 +84,12 @@ $mb: 10;
 
 .skill-graph > span:last-child {
   border-radius: 0 10px 10px 0;
+  behavior: url(./PIE/PIE.htc);
 }
 
 .skill-graph > span:first-child {
   border-radius: 10px 0 0 10px;
+  behavior: url(./PIE/PIE.htc);
 }
 
 $skill-pill-unfilled: #bbb;
@@ -76,9 +104,13 @@ $skill-pill-animation-time: 0.15s;
   height: $skill-pill-height;
   border-right: 5px solid $page-background;
   background-color: $skill-pill-unfilled;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.05) inset;
   
   &.selected {
+    //for webkit
     background-image: linear-gradient(left, $skill-pill-filled, $skill-pill-filled 50%, $skill-pill-unfilled 50%, $skill-pill-unfilled);
+    //for firefox
+    background-image: linear-gradient(to right, $skill-pill-filled, $skill-pill-filled 50%, $skill-pill-unfilled 50%, $skill-pill-unfilled);
     background-size: 200% auto;
     animation-duration: $skill-pill-animation-time;
     animation-name: fillIn;
@@ -98,8 +130,14 @@ $skill-pill-animation-time: 0.15s;
   }
 }
 
-#skills-list > li .skill-item {
-  position: relative;
+#skills-list {
+  > li {
+    margin-bottom: 20px;
+    
+    .skill-item {
+      position: relative;      
+    }
+  }
 }
 
 .skill-level {
@@ -117,4 +155,90 @@ $skill-pill-animation-time: 0.15s;
   font-size: 18px;
   font-weight: 300;
   color: #666;
+  text-align: center;
+  
+  @media only screen and (min-width: $screen-sm-min) {
+    text-align: right;
+  }
+}
+
+#history-list {
+  border-left: 1px dotted $orange;
+  padding-left: 23px;
+
+  li {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 60px;
+    
+    @media only screen and (min-width: $screen-sm-min) {
+      width: 80%;
+    }
+    
+    @media only screen and (min-width: $screen-md-min) {
+      width: 60%;
+    }
+  }
+}
+
+.job-desc {
+  line-height: 1.5;
+  @media only screen and (min-width: $screen-sm-min) {
+    text-align: justify;
+  }
+}
+
+.l-v-list > li {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  font-size: 16px;
+  margin-top: 35px;
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    //min 768px and max 991px
+    margin-top: 0;
+  }
+
+  @media only screen and (min-width: $screen-md-min) {
+    margin-top: 8px;
+  }
+
+}
+
+.head-primary {
+  float: left;
+  h1 {
+    margin-top: 8px;
+  }
+}
+
+.head-secondary {
+  float: right;
+  width: 100%;
+
+  @media only screen and (min-width: $screen-md-min) {
+    width: auto;    
+  }
+  
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    //min 768px and max 991px
+    width: 64%;
+  }
+  
+}
+
+#current p {
+  width: 100%;
+  line-height: 1.65;
+  
+  @media only screen and (min-width: $screen-sm-min) {
+    max-width: $screen-sm-min;
+    margin: 0 auto;
+    text-align: justify;
+  }
+}
+
+.disclaimer {
+  font-size: 14px;
+  font-weight: 100;
 }

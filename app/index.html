@@ -16,7 +16,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">    <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -34,23 +34,95 @@
                 <img class="img-profile" src="images/profile.jpg" alt="" />
               </div>
               <div class="media-object">
-                <h1>Aakash Goel</h1>
-                <p class="lead">Front End Developer. <strong>Really Good</strong> at it.</p>
+                <div class="clearfix">
+                  <div class="head-primary">
+                    <h1>Aakash Goel</h1>
+                    <p class="lead">Resume of a Front End Web Engineer</p>                    
+                  </div>
+                  <div class="head-secondary">
+                    <ul class="list-unstyled l-v-list social-links">
+                      <li><i class="fa fa-github"></i> <a href="http://github.com/aakashlpin" target="_blank">
+                        github.com/aakashlpin</a></li>
+                      <li><i class="fa fa-linkedin"></i> <a href="http://in.linkedin.com/in/aakashlpin/" target="_blank">
+                        in.linkedin.com/in/aakashlpin</a></li>
+                      <li><i class="fa fa-twitter"></i> <a href="http://twitter.com/aakashlpin" target="_blank">
+                        twitter.com/aakashlpin</a></li>
+                      <li><i class="fa fa-inbox"></i> <a href="">aakashlpin [at] gmail [dot] com</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           <section class="padded" id="skills">
             <div class="mb-40">
-              <h1 class="text-center">Skills</h1>   
-              <p class="text-center">Ratings on a scale of <strong>1 being poor</strong> to <strong>10 being expert</strong></p>
+              <h1 class="text-center">Skills<sup>*</sup></h1>   
+              <p class="text-center"><strong>10</strong> being an expert to <strong>0</strong> being really bad</p>
             </div>
             <ul id="skills-list" class="list-unstyled"></ul>
           </section>
           
+          <section class="padded" id="current">
+            <h1 class="text-center mb-40">Current</h1>
+            <p>
+              I've been doing a bunch of things lately. 
+              I started a project called <a href="http://guitarwith.guru">Guitar with Guru</a> in Feb 2014.
+              The idea is to create a platform for musicians to easily launch their music academies online.
+              The project is under heavy development using Javascript as a full stack language.
+              Apart from that, I am catching up on my reading, becoming a better guitar player and trying to stay fit.
+            </p>
+          </section>
+          
           <section class="padded" id="past">
             <h1 class="text-center mb-40">History</h1>
-            <ul id="history-list" class="list-unstyled"></ul>            
+            <ol id="history-list" class="list-unstyled">
+              <li>                
+                <time>Feb 2013 to Feb 2014</time>
+                <h3>Front End Engineering at MineWhat Inc.</h3>
+                <p><a href="https://minewhat.com" target="_blank">https://www.minewhat.com</a></p>
+                <p class="job-desc">
+                  I developed a kick-ass <strong>Single Page Application</strong> for MineWhat's Product Analytics web application.
+                  I handled all the architectural and framework level design decisions for the front end code.
+                  I made sure that the app performed good across all devices both in terms of memory usage as well as responsiveness.
+                  The technologies/ frameworks I worked on at MineWhat include <strong>NodeJS, MongoDB, BackboneJS, 
+                  MarionetteJS, d3 JS, RequireJS, Grunt, Bower and Bootstrap</strong> to name a few.
+                  I also hand-coded MineWhat's website and blog practicing Responsive Design principles with a 
+                  <strong>Mobile-First</strong> strategy.
+                </p>
+              </li>
+              <li>                
+                <time>June 2012 to Jan 2013</time>
+                <h3>Front End Engineering at Capillary Technologies</h3>
+                <p><a href="http://capillarytech.com" target="_blank">http://capillarytech.com</a></p>
+                <p class="job-desc">
+                  I landed a job at Capillary by <strong>winning a CSS competition</strong> at HasGeek's Meta Refresh Conference in 2012.
+                  Being the first Front End Engineer for the company, I took care of the User Experience and 
+                  User Interface Development of all the products at Capillary. I worked closely with the developers and 
+                  Product Managers to modify the products based on <strong>Java-GWT</strong> and <strong>PHP</strong> 
+                  to work with the then cutting edge tools including <strong>HTML5, CSS3, Sass, Compass, Fusion Charts, 
+                  FlotJS and Bootstrap.</strong> 
+                </p>
+              </li>
+              <li>                
+                <time>June 2008 to May 2012</time>
+                <h3>B.Tech CSE at VIT, Vellore</h3>
+                <p><a href="http://www.vit.ac.in/" target="_blank">http://www.vit.ac.in</a></p>
+                <p class="job-desc">
+                  I graduated with Bachelors in Computer Science and Engineering from Vellore Institute of Technology in May 2012
+                  with a <strong>CGPA of 8.95</strong>. I got highly interested in web design and development in my 2nd year of college. 
+                  I spent one full year learning <strong>Adobe Photoshop</strong> skills online 
+                  and the next year learning best practices while making websites.
+                  I was an <strong>active member in various technical societies</strong> in college.
+                </p>
+              </li>
+            </ol>            
+          </section>
+          
+          <section class="padded">
+            <p class="text-center disclaimer">
+              <sup>*</sup> Disclaimer: These numbers might increase fairly quickly.
+            </p>
           </section>
         </div>
       </div>
@@ -75,18 +147,6 @@
     </script>
 
     <!-- build:js scripts/plugins.js -->
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
