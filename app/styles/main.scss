@@ -107,6 +107,7 @@ $skill-pill-animation-time: 0.15s;
   box-shadow: 0 1px 0 0 rgba(0,0,0,0.05) inset;
   
   &.selected {
+    background-color: $skill-pill-filled;
     //for webkit
     background-image: linear-gradient(left, $skill-pill-filled, $skill-pill-filled 50%, $skill-pill-unfilled 50%, $skill-pill-unfilled);
     //for firefox
