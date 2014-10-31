@@ -30,16 +30,16 @@
                     level: 8
                 },
                 {
-                    name: 'CoffeeScript',
-                    level: 6
+                    name: 'NodeJS',
+                    level: 7
                 },
                 {
                     name: 'BackboneJS, Marionette',
-                    level: 9
+                    level: 8
                 },
                 {
-                    name: 'NodeJS, ReactJS',
-                    level: 7
+                    name: 'ReactJS',
+                    level: 6
                 },
                 {
                     name: 'Mongo DB',
@@ -50,7 +50,7 @@
                     level: 8
                 },
                 {
-                    name: 'UI/UX Design',
+                    name: 'UX Skills',
                     level: 7
                 }
             ];
